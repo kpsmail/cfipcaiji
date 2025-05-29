@@ -5,8 +5,7 @@ import os
 
 # 目标URL列表
 urls = ['https://api.uouin.com/cloudflare.html', 
-        'https://ip.164746.xyz'
-        ]
+        'https://ip.164746.xyz']
 
 # 正则表达式用于匹配IP地址
 ip_pattern = r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}'
@@ -39,6 +38,8 @@ with open('ip.txt', 'w') as file:
             
             # 如果找到IP地址,则写入文件
             for ip in ip_matches:
-                file.write(ip + '\n')
+                file.write(f'{ip}:443#CF优选443\n')
+                file.write(f'{ip}:8443#CF优选8443\n')
+                file.write(f'{ip}:2053#CF优选2053\n')
 
 print('IP地址已保存到ip.txt文件中。')
