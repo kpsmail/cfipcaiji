@@ -40,6 +40,5 @@ with open('ip.txt', 'w') as file:
             for ip in ip_matches:
                 file.write(f'{ip}:443#CF优选443\n')
                 file.write(f'{ip}:8443#CF优选8443\n')
-                file.write(f'{ip}:2053#CF优选2053\n')
 
 print('IP地址已保存到ip.txt文件中。')
