@@ -38,7 +38,6 @@ with open('ip.txt', 'w') as file:
             
             # 如果找到IP地址,则写入文件
             for ip in ip_matches:
-                file.write(f'{ip}:443#CF优选443\n')
                 file.write(f'{ip}:8443#CF优选8443\n')
 
 print('IP地址已保存到ip.txt文件中。')
